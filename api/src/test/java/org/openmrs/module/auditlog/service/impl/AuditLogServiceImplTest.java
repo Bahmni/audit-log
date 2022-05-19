@@ -20,6 +20,7 @@ import org.openmrs.module.auditlog.dao.impl.AuditLogDaoImpl;
 import org.openmrs.module.auditlog.model.AuditLog;
 import org.openmrs.module.auditlog.util.DateUtil;
 import org.openmrs.module.webservices.rest.SimpleObject;
+import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
@@ -31,6 +32,7 @@ import static org.mockito.Mockito.verify;
 import static org.powermock.api.mockito.PowerMockito.mockStatic;
 import static org.powermock.api.mockito.PowerMockito.when;
 
+@PowerMockIgnore("javax.management.*")
 @RunWith(PowerMockRunner.class)
 @PrepareForTest(Context.class)
 public class AuditLogServiceImplTest {
@@ -130,7 +132,7 @@ public class AuditLogServiceImplTest {
         AuditLogPayload log = new AuditLogPayload(patientUuid, "message", "eventType", "registration");
         mockStatic(Context.class);
         User user = new User();
-        user.setName("auditlogger");
+        user.setUsername("auditlogger");
         when(Context.getAuthenticatedUser()).thenReturn(user);
         when(Context.getPatientService()).thenReturn(patientService);
         Patient patient = new Patient();
@@ -153,7 +155,7 @@ public class AuditLogServiceImplTest {
         String patientUuid = "patientUuid";
         mockStatic(Context.class);
         User user = new User();
-        user.setName("auditlogger");
+        user.setUsername("auditlogger");
         when(Context.getAuthenticatedUser()).thenReturn(user);
         when(Context.getPatientService()).thenReturn(patientService);
         Patient patient = new Patient();
@@ -178,7 +180,7 @@ public class AuditLogServiceImplTest {
         String patientUuid = "patientUuid";
         mockStatic(Context.class);
         User user = new User();
-        user.setName("auditlogger");
+        user.setUsername("auditlogger");
         when(Context.getAuthenticatedUser()).thenReturn(user);
         when(Context.getPatientService()).thenReturn(patientService);
         Patient patient = new Patient();
