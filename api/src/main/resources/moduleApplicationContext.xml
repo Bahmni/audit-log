@@ -30,7 +30,7 @@
         </property>
     </bean>
 
-    <bean id="specialityService" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+    <bean id="auditLogService" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
         <property name="transactionManager">
             <ref bean="transactionManager"/>
         </property>
