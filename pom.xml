@@ -116,7 +116,7 @@
 	</build>
 
     <properties>
-        <openmrs.platform.version>2.4.2</openmrs.platform.version>
+        <openmrs.platform.version>2.5.0</openmrs.platform.version>
 		<!--test dependencies-->
 		<junitVersion>4.13</junitVersion>
 		<powerMockVersion>2.0.7</powerMockVersion>
