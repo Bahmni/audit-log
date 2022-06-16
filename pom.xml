@@ -4,7 +4,7 @@
 
 	<groupId>org.bahmni.module</groupId>
 	<artifactId>auditlog</artifactId>
-	<version>1.3.0-SNAPSHOT</version>
+	<version>1.3.0.1-SNAPSHOT</version>
 
 	<packaging>pom</packaging>
 	<name>Audit Log</name>
@@ -125,6 +125,7 @@
 		<reportingModuleVersion>0.10.4</reportingModuleVersion>
 		<calculationModuleVersion>1.3-SNAPSHOT</calculationModuleVersion>
 		<serializationXstreamModuleVersion>0.2.12</serializationXstreamModuleVersion>
+		<auditLogVersion>1.3.0.1-SNAPSHOT</auditLogVersion>
 		<argLine>-Xmx1024m</argLine>
     </properties>
 	<dependencyManagement>
