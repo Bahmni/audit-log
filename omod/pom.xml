@@ -46,7 +46,7 @@
 		<dependency>
 			<groupId>org.bahmni.module</groupId>
 			<artifactId>auditlog-api</artifactId>
-			<version>1.3.0-SNAPSHOT</version>
+			<version>${auditLogVersion}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
