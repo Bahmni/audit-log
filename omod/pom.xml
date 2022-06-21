@@ -16,6 +16,7 @@
 		<MODULE_NAME>${project.name}</MODULE_NAME>
 		<MODULE_VERSION>${project.version}</MODULE_VERSION>
 		<MODULE_PACKAGE>${project.groupId}.${MODULE_ID}</MODULE_PACKAGE>
+		<auditLogApiVersion>1.0-SNAPSHOT</auditLogApiVersion>
 	</properties>
 
 	<dependencies>
@@ -44,9 +45,9 @@
 			<scope>provided</scope>
         </dependency>
 		<dependency>
-			<groupId>org.bahmni.module</groupId>
+			<groupId>org.openmrs.module</groupId>
 			<artifactId>auditlog-api</artifactId>
-			<version>${auditLogVersion}</version>
+			<version>${auditLogApiVersion}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
