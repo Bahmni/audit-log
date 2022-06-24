@@ -24,27 +24,4 @@
   		    http://www.springframework.org/schema/util/spring-util-3.0.xsd">
     <context:component-scan base-package="org.openmrs.module.auditlog"/>
 
-    <bean id="auditLogDao" class="org.openmrs.module.auditlog.dao.impl.AuditLogDaoImpl">
-        <property name="sessionFactory">
-            <ref bean="sessionFactory"/>
-        </property>
-    </bean>
-
-    <bean id="specialityService" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
-        <property name="transactionManager">
-            <ref bean="transactionManager"/>
-        </property>
-        <property name="target">
-            <bean class="org.openmrs.module.auditlog.service.impl.AuditLogServiceImpl">
-                <constructor-arg ref="auditLogDao"/>
-            </bean>
-        </property>
-        <property name="preInterceptors">
-            <ref bean="serviceInterceptors"/>
-        </property>
-        <property name="transactionAttributeSource">
-            <ref bean="transactionAttributeSource"/>
-        </property>
-    </bean>
-
 </beans>
