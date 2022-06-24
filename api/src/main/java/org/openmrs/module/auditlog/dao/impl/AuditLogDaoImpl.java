@@ -8,26 +8,24 @@ import org.hibernate.criterion.Restrictions;
 import org.hibernate.sql.JoinType;
 import org.openmrs.Patient;
 import org.openmrs.api.PatientService;
-import org.openmrs.api.context.Context;
 import org.openmrs.module.auditlog.dao.AuditLogDao;
 import org.openmrs.module.auditlog.model.AuditLog;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
+@Component
 public class AuditLogDaoImpl implements AuditLogDao {
-
+    @Autowired
     private SessionFactory sessionFactory;
-
-    public void setSessionFactory(SessionFactory sessionFactory) {
-        this.sessionFactory = sessionFactory;
-    }
+    @Autowired
+    private PatientService patientService;
 
     protected static Integer LIMIT = 50;
-
-    PatientService patientService = Context.getPatientService();
 
     @Override
     public List<AuditLog> getLogs(String username, String patientIdentifier, Date startDateTime,
