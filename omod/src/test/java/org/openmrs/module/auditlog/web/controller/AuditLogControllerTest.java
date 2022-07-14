@@ -16,6 +16,7 @@ import org.openmrs.module.auditlog.service.AuditLogService;
 import org.openmrs.module.auditlog.util.DateUtil;
 import org.openmrs.module.webservices.rest.SimpleObject;
 import org.powermock.api.mockito.PowerMockito;
+import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
@@ -29,6 +30,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.MockitoAnnotations.initMocks;
 import static org.powermock.api.mockito.PowerMockito.when;
 
+@PowerMockIgnore("javax.management.*")
 @PrepareForTest({Context.class})
 @RunWith(PowerMockRunner.class)
 public class AuditLogControllerTest {
