@@ -11,7 +11,14 @@
 	<name>Audit Module OMOD</name>
 	<description>OpenMRS module project for Basic Module</description>
 
-	<properties>
+	
+    <licenses>
+        <license>
+            <name>Mozilla Public License Version 2.0</name>
+            <url>https://www.bahmni.org/license/mplv2hd</url>
+        </license>
+    </licenses>
+    <properties>
 		<MODULE_ID>auditlog</MODULE_ID>
 		<MODULE_NAME>${project.name}</MODULE_NAME>
 		<MODULE_VERSION>${project.version}</MODULE_VERSION>
