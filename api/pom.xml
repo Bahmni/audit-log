@@ -4,14 +4,19 @@
 	<parent>
 		<groupId>org.bahmni.module</groupId>
 		<artifactId>auditlog</artifactId>
-		<version>1.4.0</version>
+		<version>2.0.0-SNAPSHOT</version>
 	</parent>
 	<artifactId>auditlog-api</artifactId>
 	<packaging>jar</packaging>
 	<name>Audit Log Module API</name>
 	<description>API project for Audit Log</description>
-
-	<build>
+    <licenses>
+        <license>
+            <name>Mozilla Public License Version 2.0</name>
+            <url>https://www.bahmni.org/license/mplv2hd</url>
+        </license>
+    </licenses>
+    <build>
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>
